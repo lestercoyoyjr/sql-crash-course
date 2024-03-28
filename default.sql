@@ -8,4 +8,7 @@ CREATE TABLE Test_transactions (
 
 SELECT * FROM Test_transactions;
 
-INSERT INTO Test_transactions (transaction_id,amount) VALUES (1, 4.99);
+INSERT INTO Test_transactions (transaction_id,amount) VALUES (2, 5.99);
+
+ALTER TABLE Test_transactions
+ADD CONSTRAINT PRIMARY KEY (transaction_id);
