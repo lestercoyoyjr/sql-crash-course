@@ -12,6 +12,11 @@ SELECT SUM(amount) AS "Revenue per Day", (SELECT DATE(transaction_date) FROM tes
 FROM test_transactions
 GROUP BY Date;
 
+-- OR
+SELECT DATE(transaction_date) AS Date,SUM(amount)
+FROM test_transactions
+GROUP BY Date;
+
 SELECT SUM(amount), customer_id
 FROM test_transactions
 GROUP BY customer_id;
